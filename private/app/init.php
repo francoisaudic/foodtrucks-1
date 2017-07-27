@@ -94,3 +94,15 @@ if (
     header("location: index.php?page=login");
     exit;
 }
+
+
+
+// -----------------
+// LOG OUT
+// -----------------
+
+if ($page == "logout") {
+    session_destroy();
+    header("location: index.php");
+    exit;
+}

@@ -24,6 +24,7 @@
             <a href="index.php?page=login">Connexion</a>
             <?php else: ?>
             <a href="index.php?page=profile"><?= $_SESSION['user']['firstname']; ?></a>
+            <a href="index.php?page=logout">Déconnexion</a>            
             <?php endif; ?>
 
         </nav>

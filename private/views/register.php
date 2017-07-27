@@ -29,7 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     // Controler l'intégrité du token
-    if ($_SESSION['token'] !== $token) {
+    if (!isset($_SESSION['token'])
+        || empty($_SESSION['token'])
+        || $_SESSION['token'] !== $token) {
         $save = false;
         setFlashbag("danger", "Le token est invalide.");
     }
