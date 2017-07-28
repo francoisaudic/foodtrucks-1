@@ -120,6 +120,8 @@ function toggleViewPwd(element) {
             $('form').serializeArray(),
             function(response) {
                 console.log(response);
+
+                alert(response.message);
             }
         );
     }
